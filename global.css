@@ -1,0 +1,86 @@
+/* 
+    1. Prevent padding and border from affecting element width
+    2. Allow adding a border to an element by just adding a border-width. (For example, you can put a border-width on any existing element, and it will be the same everywhere. Absolutely all borders can be edited from one place)
+
+*/
+
+*,
+::before,
+::after {
+    /* The numbers correspond to the numbers above. */
+    box-sizing: border-box; /* 1 */
+    border-width: 0; /* */
+    border-style: solid; /* 2 */
+    border-color: #000; /* 2 */
+}
+
+::before,
+::after {
+    content: ""; /* disabling all content. There will be no need to write once again for pseudo-classes */
+}
+
+/* 
+    1. Use a consistent sensible line-height in all browsers.
+    2. Prevent adjustments of font size after orientation changes in IOS.
+    3. Use a more readable tab size.
+*/
+
+html {
+    line-height: 1.5; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -moz-text-size-adjust: 4; /* 3 */
+    tab-size: 4; /* 3 */
+}
+
+/* 
+    1. Remove the margin in all browsers.
+    2. Inherit line-height from `html` so users can set them as class directly on the `html` element.
+*/
+
+body {
+    margin: 0; /* 1 */
+    line-height: inherit; /* 2 */
+}
+
+/* 
+    1. Add the correct height in Firefox.
+    2. Correct the inheritance of border color in Firefox
+    3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+    height: 0; /* 1 */
+    color: inherit; /* 2 */
+    border-top-width: 1px; /* 3 */
+}
+
+/* 
+  Add the correct text decoration in Chrome, Edge and Safari
+*/
+
+abbr:where([title]) {
+    text-decoration: underline dotted;
+}
+
+/* 
+    Remove the default font size and weight for headings
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* 
+    Reset links to optimize for opt-in styling instead of opt-out
+*/
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
