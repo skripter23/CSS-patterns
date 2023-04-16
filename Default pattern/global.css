@@ -9,7 +9,7 @@
 ::after {
     /* The numbers correspond to the numbers above. */
     box-sizing: border-box; /* 1 */
-    border-width: 0; /* */
+    border-width: 0; /* 2 */
     border-style: solid; /* 2 */
     border-color: #000; /* 2 */
 }
